@@ -1,0 +1,23 @@
+# R session files
+.Rhistory
+.Rapp.history
+.RData
+.RDataTmp
+.Ruserdata
+.Rproj.user/
+
+# Quarto / knitr output
+_site/
+_freeze/
+.quarto/
+*_cache/
+*_files/
+*.utf8.md
+*.knit.md
+
+# Rendered HTML (your source files are .R, .qmd, or .md)
+*.html
+
+# OS metadata
+.DS_Store
+Thumbs.db

@@ -1,0 +1,126 @@
+name: Peer review (Week 4)
+description: Review a classmate's biomass briefing. One Issue per briefing.
+title: "Peer review"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Read the whole briefing before you start. Your **Verdict** and
+        **Argues** answers are read by a script that builds the class
+        results.
+
+  - type: dropdown
+    id: verdict
+    attributes:
+      label: Verdict
+      description: |
+        FAITHFUL = you believe the author was arguing in good faith.
+        SUSPECT = you believe the author was deliberately misleading you.
+      options:
+        - FAITHFUL
+        - SUSPECT
+    validations:
+      required: true
+
+  - type: dropdown
+    id: argues
+    attributes:
+      label: Argues
+      description: |
+        What does the briefing recommend for UK biomass power? This is separate from
+        whether you trust it: an honest briefing and a traitor's can reach
+        the same conclusion.
+      options:
+        - KEEP-OR-EXPAND
+        - KEEP-ONLY-WITH-CCS
+        - PHASE-OUT
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: clarity
+    attributes:
+      label: Clarity
+      description: Tick each statement that is true of the briefing.
+      options:
+        - label: The summary states a clear conclusion up front
+        - label: A non-specialist (e.g. a government minister) could follow the argument
+        - label: Every figure is referenced in the text
+
+  - type: textarea
+    id: clarity-comments
+    attributes:
+      label: Comments on clarity
+      placeholder: >-
+        1–2 sentences. Is the main message clear? Could the reader stop
+        after the summary and still know the answer?
+
+  - type: checkboxes
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Tick each statement that is true of the briefing.
+      options:
+        - label: Numbers have context or comparators ("Is that a big number?")
+        - label: Figures are clearly labelled (axes, captions, units)
+        - label: Data sources are cited
+
+  - type: textarea
+    id: evidence-comments
+    attributes:
+      label: Comments on evidence
+      placeholder: >-
+        1–2 sentences. Are the figures well-chosen? Do they support the
+        argument? Is anything presented without context?
+
+  - type: checkboxes
+    id: uncertainty
+    attributes:
+      label: Uncertainty
+      description: Tick each statement that is true of the briefing.
+      options:
+        - label: The briefing acknowledges limitations or assumptions
+        - label: More than one scenario or sensitivity is discussed
+        - label: The briefing distinguishes between what is measured and what is assumed
+
+  - type: textarea
+    id: uncertainty-comments
+    attributes:
+      label: Comments on uncertainty
+      placeholder: >-
+        1–2 sentences. Does the author acknowledge that the answer depends
+        on assumptions? Are any claims presented as more certain than they
+        should be?
+
+  - type: textarea
+    id: why
+    attributes:
+      label: Why I reached that verdict
+      description: At least two sentences.
+      placeholder: >-
+        Point to specific figures, claims, or omissions. "It just feels
+        wrong" is not sufficient.
+    validations:
+      required: true
+
+  - type: textarea
+    id: believe
+    attributes:
+      label: What made me want to believe this
+      description: >-
+        Answer honestly even if your verdict is SUSPECT. Some of these will
+        be read aloud, unattributed.
+      placeholder: >-
+        What did this briefing do well? Which sentence, figure or number was
+        most persuasive? Did the briefing reinforce / challenge what you thought
+        before you started reading?
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: One suggestion for improvement
+      placeholder: >-
+        One specific thing the author could improve, regardless of whether
+        you trust the briefing.
