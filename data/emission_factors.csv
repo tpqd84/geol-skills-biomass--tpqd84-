@@ -1,0 +1,13 @@
+fuel,scenario,co2_kg_per_mwh,notes
+biomass,official,0,UK carbon accounting: CO2 from biomass counted as zero at point of combustion (UNFCCC rules)
+biomass,combustion_only,330,"CO2 released at chimney, ~330 kg/MWh for wood pellet plant at ~36% efficiency (comparable to coal)"
+biomass,with_supply_chain,390,"Adds harvesting, chipping, drying, pelletising (~40 kg/MWh) and transport (~20 kg/MWh) to combustion"
+biomass,payback_20yr,120,Net emissions if forest regrows and reabsorbs CO2 over 20 years; assumes managed plantation forestry
+biomass,payback_40yr,55,Net emissions over 40-year regrowth cycle; typical for SE US hardwood forests
+biomass,payback_100yr,15,Net emissions over 100-year regrowth; approaches carbon neutrality but far beyond 2050 target
+coal,official,910,"DESNZ grid carbon factor for coal generation, includes combustion only"
+coal,with_supply_chain,990,"Adds mining, processing, and transport emissions (~80 kg/MWh)"
+gas,official,360,DESNZ grid carbon factor for CCGT gas generation
+gas,with_supply_chain,410,"Adds extraction, processing, pipeline/LNG transport, and methane leakage (~50 kg/MWh)"
+wind,lifecycle,11,"Full lifecycle including manufacture, installation, and decommissioning; no combustion emissions"
+solar,lifecycle,25,"Full lifecycle including panel manufacture (often in China), installation, and disposal"
